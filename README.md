@@ -3,6 +3,8 @@ A collection of front end interview questions I faced and their answers. Answers
 
 
 **_JavaScript_**
+
+
 Q1. Define dependency injection. How is it achieved in JavaScript?
 * Dependency injection is a software design pattern that allows someone to remove hard-coded dependencies and makes it possible to change  them. 
 * Dependency injection means giving an object its own instance variables. 
