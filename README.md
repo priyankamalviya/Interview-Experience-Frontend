@@ -33,14 +33,16 @@ If one operands is string another is number, convert string to number
 If one is boolean and another is non-boolean, convert boolean to number and then perform comparison
 While comparing a string or number to an object, try to convert the object to a primitive type and then try to compare
 Be careful while comparing objects, identifiers must reference the same objects or same array.
-`var a = {a: 1};
+```
+var a = {a: 1};
 var b = {a: 1};
 a == b //false
 a === b //false
 
 var c = a;
 a == c//true
-a === c //true`
+a === c //true
+```
 
 
 
