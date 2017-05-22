@@ -21,18 +21,15 @@ Summary of explanation:
 > multiple inheritance. 
 
 Q3.  == Vs ===
-The simplest way of saying that, == will not check types and === will check whether both sides are of same type. So, == is tolerant. But under the hood it converts to its convenient type to have both in same type and then do the comparison.
-
-=== compares the types and values. Hence, if both sides are not same type, answer is always false. For example, if you are comparing two strings, they must have identical character sets. For other primitives (number, boolean) must share the same value.
-
-Rule for implicit coercion: Comparison by using == does implicit type conversion under the hood. And rules for implicit coercion are as follows-
-
-If both operands are same type use ===
+* The simplest way of saying that, == will not check types and === will check whether both sides are of same type. So, == is tolerant. But under the hood it converts to its convenient type to have both in same type and then do the comparison.
+* === compares the types and values. Hence, if both sides are not same type, answer is always false. For example, if you are comparing two strings, they must have identical character sets. For other primitives (number, boolean) must share the same value.
+* Rule for implicit coercion: Comparison by using == does implicit type conversion under the hood. And rules for implicit coercion are as follows-
+- If both operands are same type use ===
 undefined == null
-If one operands is string another is number, convert string to number
-If one is boolean and another is non-boolean, convert boolean to number and then perform comparison
-While comparing a string or number to an object, try to convert the object to a primitive type and then try to compare
-Be careful while comparing objects, identifiers must reference the same objects or same array.
+- If one operands is string another is number, convert string to number
+- If one is boolean and another is non-boolean, convert boolean to number and then perform comparison
+- While comparing a string or number to an object, try to convert the object to a primitive type and then try to compare
+- Be careful while comparing objects, identifiers must reference the same objects or same array.
 ```
 var a = {a: 1};
 var b = {a: 1};
