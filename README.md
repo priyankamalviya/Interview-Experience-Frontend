@@ -40,6 +40,11 @@ var c = a;
 a == c//true
 a === c //true
 ```
+Q4. What are the most unique features of JavaScript?
+* Prototypal inheritance (read OLOO)
+* Functional programming 
+https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3
+
 
 
 
