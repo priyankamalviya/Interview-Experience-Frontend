@@ -45,7 +45,18 @@ Q4. What are the most unique features of JavaScript?
 * Functional programming 
 https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3
 
-
+Q4. Can array be multi dimensional in JavaScript?
+* NO, however, like most C languages it can have an array of arrays
+* Example:
+    ```
+    var matrix = [
+      [0,1,2],
+      [55,21,9],
+      [3, 7, 10]
+    ];
+    
+    console.log(matrix [1, 2]); // 9 
+    ```
 
 
 
