@@ -66,5 +66,43 @@ Object.prototype.toString.apply(arr);
 ```
 * If the above returns "[object Array]", it is an array.
 
+Q6. Mention different ways in which JavaScript objects can be created.
+1 Using the Object() constructor:
+  ```
+  let obj = new Object();   //now discouraged
+  ```
+2 Using Object.create() method
+```
+let obj = Object.create(null);
+```
+3 Using the brackets syntactic sugar
+```
+let obj = {};
+```
+4. Using a function constructor
+```
+var Obj = function(name){
+    this.name = name;
+}
+let temp = new Obj("Heya!!!");
+```
+5. Using constructor + prototype
+```
+function myObj(){};
+myObj.prototype.name = "Hello";
+let temp = new myObj();
+```
+6. Using ES6 class syntax
+class myClass{
+    constructor(name){
+        this.name = name;
+    }
+}
+var temp = new myClass("Hello");
 
-
+7. Singleton pattern
+```
+let temp = new function(){
+    this.name = "hello"
+}
+```
