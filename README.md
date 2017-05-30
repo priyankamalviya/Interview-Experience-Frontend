@@ -68,15 +68,15 @@ Object.prototype.toString.apply(arr);
 
 Q6. Mention different ways in which JavaScript objects can be created.
 -------
-1 Using the Object() constructor:
+1. Using the Object() constructor:
   ```
   let obj = new Object();   //now discouraged
   ```
-2 Using Object.create() method
+2. Using Object.create() method
 ```
 let obj = Object.create(null);
 ```
-3 Using the brackets syntactic sugar
+3. Using the brackets syntactic sugar
 ```
 let obj = {};
 ```
