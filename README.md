@@ -62,7 +62,7 @@ Q5. Lets say there is an object arr. How will you confirm it is an array?
 
 ```
 let arr = [9, 1, 8, 7, 3, 4, 12];
-Object.prototype.toString.apply(arr).
+Object.prototype.toString.apply(arr);
 ```
 * If the above returns "[object Array]", it is an array.
 
