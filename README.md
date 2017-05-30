@@ -43,7 +43,7 @@ a === c //true
 Q4. What are the most unique features of JavaScript?
 * Prototypal inheritance (read OLOO)
 * Functional programming 
-https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3
+* https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3
 
 Q4. Can array be multi dimensional in JavaScript?
 * NO, however, like most C languages it can have an array of arrays
