@@ -108,3 +108,7 @@ let temp = new function(){
     this.name = "hello"
 }
 ```
+Q7. What is so great about React ?
+* React is based on the flow architecture
+* Here model is the single source of truth 
+* Follows 1 way data binding that removes complexity in state management
