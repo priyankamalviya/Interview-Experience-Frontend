@@ -112,3 +112,9 @@ Q7. What is so great about React ?
 * React is based on the flow architecture
 * Here model is the single source of truth 
 * Follows 1 way data binding that removes complexity in state management
+
+Q8. Design and implement a modal with form and submit the data using JavaScript
+This could have varius possible answers. The gist below could be one possible one:
+* https://gist.github.com/havvg/3226804
+
+I was asked a follow up question: How will you allow enter key submit option? 
