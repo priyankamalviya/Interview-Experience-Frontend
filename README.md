@@ -118,3 +118,52 @@ This could have varius possible answers. The gist below could be one possible on
 * https://gist.github.com/havvg/3226804
 
 I was asked a follow up question: How will you allow enter key submit option? 
+
+Q9. How will you print all text in a page?
+* This a DOM traversal question. 
+* A good solution would be to use querySelector, get reference to a dom element, and then pass it to a function. Start with an empty array, check if child nodes are present. If no child nodes are present, append the nodeValue(here this will provide the text present in that node) of the node to this array. Continue recursing this function till all child nodes are exhausted.
+
+JAVASCRIPT
+
+```
+let main = document.querySelector('.container');
+
+function getAllText(node){
+  var allText = [];
+
+  function getNodeText(node){
+      if(node && node.childNodes && node.childNodes.length){
+          for(var i = 0, len = node.childNodes.length; i<len; i++){
+              getNodeText(node.childNodes[i]);
+          }
+      }
+      else{
+          allText.push(node.nodeValue);
+     }
+  }
+  getNodeText(node);
+  return allText.join('');
+}
+
+
+console.log(getAllText(main));
+```
+
+HTML
+
+```
+<div class="container">
+<header><h1>Main Heading</h1></header>
+<main>
+  <h2>Sub Heading</h2>
+  <ul>
+    <li>Title 1</li>
+    <li>Title 2</li>
+    <li>Title 3</li>
+    <li>Title 4</li>
+    <li>Title 5</li>
+  </ul>
+</main>
+  
+</div>
+```
