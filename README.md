@@ -1,5 +1,5 @@
 # Interview-Experience-Frontend
-A collection of front end interview questions I faced and their answers. Answers are based on my understanding and/ or taken from the internet. 
+A collection of front end interview questions I faced, and their answers. Answers are based on my understanding and/ or taken from the internet. 
 
 
 ## **_JavaScript_**
@@ -166,4 +166,40 @@ HTML
 </main>
   
 </div>
+```
+Q10. Write a vanilla javascript function to convert the following into links in your page. 
+```
+var links = {
+    "codepen": "www.codepen.io",
+    "jsbin": "www.jsbin.com",
+    "jsfiddle": "www.jsfiddle.com"
+}
+```
+* Solution:
+HTML
+```
+<section>
+<ul id="links"></ul>
+</section>
+```
+JS
+```
+
+let links = {
+    "codepen": "www.codepen.io",
+    "jsbin": "www.jsbin.com",
+    "jsfiddle": "www.jsfiddle.com"
+}
+function displayLinks(){
+    let links = document.getElementById('links');
+    let key;
+    for(key in links){
+        links.innerHTML += `<li><a href=${links[key]}>${key}</a></li>`;
+    }
+}
+
+displayLinks(links);
+
+
+
 ```
