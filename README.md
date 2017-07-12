@@ -200,6 +200,22 @@ function displayLinks(){
 
 displayLinks(links);
 
+```
 
+Q11. Write a function that takes a string and a specific character and returns the string without that character.
+
+* Solution:
+```
+function deleteCharacter(str, i){
+  console.log("inside delete now", str, i);
+  for(let j=0; j< str.length; j++){  
+    if(str[j] === i){
+      let newStr = str.slice(0, j) + str.slice(j+1, str.length);
+      console.log(newStr);
+    }
+  } 
+}
+
+deleteCharacter("Bhatti", 'h');
 
 ```
