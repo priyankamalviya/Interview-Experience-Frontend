@@ -219,3 +219,17 @@ function deleteCharacter(str, i){
 deleteCharacter("Bhatti", 'h');
 
 ```
+Q12. Compare 2 arrays and find common values
+
+* Solution
+
+```
+let result,
+    arr1 = [1, 2, 3, 4],
+    arr2 = [2, 3, 6, 9];
+    
+result = arr1.filter( x => arr2.indexOf(x) !== -1);
+
+console.log(result);
+
+```
