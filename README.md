@@ -238,3 +238,6 @@ All three methods are used to change the value of this for a given function.
 * Call invokes the function and allows you to pass in arguments one by one.
 * Apply invokes the function and allows you to pass in arguments as an array.
 * Bind returns a new function, allowing you to pass in a this array and any number of arguments.
+
+> Remember which one is which by remembering that Call is for comma (separated list) and Apply is for Array.
+> Bind is a bit different. It returns a new function. Call and Apply execute the current function immediately.
