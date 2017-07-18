@@ -233,3 +233,8 @@ result = arr1.filter( x => arr2.indexOf(x) !== -1);
 console.log(result);
 
 ```
+Q13. What is the difference between call, apply and bind in JavaScript?
+All three methods are used to change the value of this for a given function.
+* Call invokes the function and allows you to pass in arguments one by one.
+* Apply invokes the function and allows you to pass in arguments as an array.
+* Bind returns a new function, allowing you to pass in a this array and any number of arguments.
