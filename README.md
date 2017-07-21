@@ -241,3 +241,27 @@ All three methods are used to change the value of this for a given function.
 
 > Remember which one is which by remembering that Call is for comma (separated list) and Apply is for Array.
 > Bind is a bit different. It returns a new function. Call and Apply execute the current function immediately.
+
+Q14. Write a function to find if a string is a palindrome. Find if permutation of the string is palindrome?
+
+* Simple solution to find if a string is palindrome:
+const isPalindrome = (str) => {
+  const reversed = str.split('').reverse().join('');
+  return reversed === str;
+} 
+
+console.log(isPalindrome('level'));
+* To check if the permutation of a string is palindrome:
+const isPermutationPalindrome = (str) => {
+  const set = new Set();
+  str.split('').forEach( (letter) => {
+    // if this letter is found in set, delete it
+    if(set[letter]) delete set[letter];
+    //if set does not have this letter, add it to set
+    else set[letter] = letter;
+  });
+  // test if the length of keys in set object is at the most 1
+  return Object.keys(set).length <= 1;
+}
+
+console.log(isPermutationPalindrome('level'));
