@@ -245,13 +245,16 @@ All three methods are used to change the value of this for a given function.
 Q14. Write a function to find if a string is a palindrome. Find if permutation of the string is palindrome?
 
 * Simple solution to find if a string is palindrome:
+```
 const isPalindrome = (str) => {
   const reversed = str.split('').reverse().join('');
   return reversed === str;
 } 
-
 console.log(isPalindrome('level'));
+```
+
 * To check if the permutation of a string is palindrome:
+```
 const isPermutationPalindrome = (str) => {
   const set = new Set();
   str.split('').forEach( (letter) => {
@@ -263,5 +266,5 @@ const isPermutationPalindrome = (str) => {
   // test if the length of keys in set object is at the most 1
   return Object.keys(set).length <= 1;
 }
-
 console.log(isPermutationPalindrome('level'));
+```
