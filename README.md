@@ -268,3 +268,29 @@ const isPermutationPalindrome = (str) => {
 }
 console.log(isPermutationPalindrome('level'));
 ```
+
+Q15. Write a JS function to find permutation of string:
+
+* The idea is to take one element each in for loop, recursively call the rest elements and concatenate to this element.
+```
+function permute(str){
+  if (str.length<2) return str;
+  
+  let permutations = [];
+  for(let i =0; i< str.length; i++){
+    let letter = str[i];
+    
+    if(str.indexOf(letter) !== i) continue;
+    
+    let remaining = str.slice(0, i) + str.slice(i+1,str.length);
+    
+    for(let subSet of permute(remaining)){
+      permutations.push(letter + subSet);
+    }
+  }
+  
+  return permutations;
+}
+
+console.log(permute('abc'));
+```
