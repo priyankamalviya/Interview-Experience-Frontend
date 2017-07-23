@@ -274,18 +274,18 @@ Q15. Write a JS function to find permutation of string:
 * The idea is to take one element each in for loop, recursively call the rest elements and concatenate to this element.
 ```
 function permute(str){
-  if (str.length<2) return str;
+  if (str.length<2) return str; // This is the base case
   
-  let permutations = [];
+  let permutations = []; // resultant string gets stored here
   for(let i =0; i< str.length; i++){
     let letter = str[i];
     
-    if(str.indexOf(letter) !== i) continue;
+    if(str.indexOf(letter) !== i) continue; // if letter was used earlier, skip it for this iteration
     
-    let remaining = str.slice(0, i) + str.slice(i+1,str.length);
+    let remaining = str.slice(0, i) + str.slice(i+1,str.length); // '+ ' means concat in JS
     
     for(let subSet of permute(remaining)){
-      permutations.push(letter + subSet);
+      permutations.push(letter + subSet);      // '+ ' means concat in JS
     }
   }
   
