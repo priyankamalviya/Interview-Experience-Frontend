@@ -364,4 +364,8 @@ function createDOMTree(el){
         el.append(li);
     };
 };
+
+createDOMTree($('#tree'))(TREE_DATA);
 ```
+
+
