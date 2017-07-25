@@ -294,3 +294,74 @@ function permute(str){
 
 console.log(permute('abc'));
 ```
+Q16. Write a function to create DOM tree 
+* Solution:
+Lets says we have a given object that looks like this: 
+```
+const TREE_DATA = {
+  name: "Root",
+  items: [
+    {
+      name: "Home"
+    },
+    {
+      name: "Downloads",
+      items: [{ name: "budget_report.xls" }, { name: "cat_meme.jpg" }]
+    },
+    {
+      name: "Documents",
+      items: [
+        { name: "foo" },
+        { name: "bar" },
+        {
+          name: "sub_folder",
+          items: [
+            { name: "hello" },
+            {
+              name: "world",
+              items: [{ name: "countries.db" }]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Users",
+      items: [
+        { name: "Linda" },
+        { name: "Fred" },
+        { name: "James" },
+        { name: "Karen" }
+      ]
+    },
+    {
+      name: "Applications",
+      items: [
+        { name: "Notepad" },
+        { name: "Google Chrome" },
+        { name: "Slack" },
+        { name: "Adobe Photoshop" }
+      ]
+    }
+  ]
+};
+```
+And we have initial dom ul declared:
+```
+<ul id="tree"></ul>
+```
+
+The function will take dom reference and the obj as parameters and call itself recursively if items are present. Finally the whole tree gets appended to the dom reference.
+
+```
+function createDOMTree(el){
+    return function(obj){
+        let li = `<li><span>${obj.name}</span></li>`;
+        if(obj.items){
+            let ul = $('ul').appendTo(li);
+            obj.items.forEach(createDOMTree(ul));
+        }
+        el.append(li);
+    };
+};
+```
