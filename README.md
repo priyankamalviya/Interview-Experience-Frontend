@@ -367,5 +367,20 @@ function createDOMTree(el){
 
 createDOMTree($('#tree'))(TREE_DATA);
 ```
+Q17. Write a function to find Fibonacii sum.
+* This is a very common problem.
+* You get extra points if you optimize the solution using memoization.
+```
+function fibonacii(num, memo){ 
+  memo = memo || {};
+  if(memo[num]) return memo[num];
+  
+  if(num <= 1 ) return 1; // base case
+  
+  return memo[num] = fibonacii(num-1, memo) + fibonacii(num-2, memo);
+}
+
+console.log(fibonacii(9));
+```
 
 
