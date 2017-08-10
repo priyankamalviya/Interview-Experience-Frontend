@@ -382,5 +382,30 @@ function fibonacii(num, memo){
 
 console.log(fibonacii(9));
 ```
+Q18. Implement the fizzbuzz problem.
+*  The fizzbuzz problem:
+if a number is a multiple of 3, print fizz
+if a number is a multiple of 5, print buzz
+if a number is a multiple of both 3 & 5, print fizzbuzz
 
+* Solution in es6:
+```
+
+for(let i =1; i< 101; i++){
+  const isFizz = i % 3 === 0;
+  const isBuzz = i%5 === 0 ;
+  
+  const isFizzBuzz = i % 3 === 0 && i % 5 === 0;
+  const result = isFizzBuzz
+            ? 'FizzBuzz'
+            : isFizz
+            ? 'Fizz'
+            : isBuzz
+            ? 'Buzz'
+             : i;
+      
+  console.log(result);
+
+}
+```
 
