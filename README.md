@@ -408,4 +408,26 @@ for(let i =1; i< 101; i++){
 
 }
 ```
+Q19. Write a function to convert a string to an integer
+* Solution in es6 (Typescript)
+ ```
+const stringToInteger = (str: string): number => {
+  const firstCode = "0".charCodeAt(0);
 
+  let sign = 1;
+  if (str[0] === "-") {
+    str = str.substring(1);
+    sign = -1;
+  }
+
+  let count = 0;
+  for (const char of str) {
+    count = count * 10 + (char.charCodeAt(0) - firstCode);
+  }
+
+  return sign * count;
+}
+
+console.log(stringToInteger("999")); // 999
+console.log(stringToInteger("-023")); // -23
+ ```
