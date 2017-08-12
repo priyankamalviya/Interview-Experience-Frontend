@@ -368,7 +368,7 @@ function createDOMTree(el){
 createDOMTree($('#tree'))(TREE_DATA);
 ```
 
-* I found a similar problem in this [link](https://stackoverflow.com/questions/44586038/recursive-javascript-function-to-return-detail). This seems is a popular interview question!
+* I found a similar problem in this [link](https://stackoverflow.com/questions/44586038/recursive-javascript-function-to-return-detail). This is a popular interview question!
 
 Q17. Write a function to find Fibonacii sum.
 * This is a very common problem.
