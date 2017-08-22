@@ -434,3 +434,70 @@ const stringToInteger = (str: string): number => {
 console.log(stringToInteger("999")); // 999
 console.log(stringToInteger("-023")); // -23
  ```
+Q20. Write a function to merge 2 objects in JavaScript.
+* Solution
+```
+var mergeObjects = function (obj1, obj2) { 
+  /* function to check if parameters passed are objects*/
+  function isObject(obj){
+    return obj instanceof Object;
+  }
+  
+  /* iterate through each key of the second object passed. */
+    for (let key in obj2) {
+      /* check if both parameters are still objects */
+            if (obj1[key] && isObject(obj1[key]) && isObject(obj2[key])) {
+              /* recurse through them if they are objects*/
+                mergeObjects(obj1[key], obj2[key]);
+            } else {
+              /* if any of these 3 conditions, ie, this key just not exist in obj1, AND, this key exists in obj1 AND this key exists in obj2 turn false, assign this key & value to obj1 */
+                obj1[key] = obj2[key];
+            }
+    }
+  //finally return obj1
+    return obj1;
+};
+
+
+/* pass on the 2 objects you want to merge */
+console.log(mergeObjects({
+  a: {
+    b: {
+      c: 0
+    }
+  },
+  d: 1
+}, {
+  a: {
+    b: {
+      d: 2
+    }
+  },
+  e: 3
+}));
+
+
+/* ==================== solution using Object.assign ======================= */
+let obj1 = {
+  a: {
+    b: {
+      c: 0
+    }
+  },
+  d: 1
+};
+
+let obj2 = {
+  a: {
+    b: {
+      d: 2
+    }
+  },
+  e: 3
+};
+
+/* simple method that does the same thing*/
+let result = Object.assign({}, obj1, obj2);
+
+console.log(result);
+```
