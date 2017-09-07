@@ -505,3 +505,14 @@ Q21. What is reflow? What causes forced reflow?
 * Solution:
 When you change size or position of an element in the page, all the elements after it has to change their position according to the changes you made. For example, if you change height on an element, all the elements under it has to move down in the page to accomodate a change in height. Hence, flow of the elements in the page is changed and this is called reflow.
 **Why reflow is bad**: Reflows could be very expensive and it might have a performance hit specially in the smaller devices like phone. As it might causes changes in the portion (or whole) layout of the page.
+
+Q22. What do you understand by specificity?
+
+* Solution:
+
+Specificity is the means by which browsers decide which CSS property values are the most relevant to an element and, therefore, will be applied. Specificity is based on the matching rules which are composed of different sorts of CSS selectors.
+The following list of selector types increases by specificity:
+
+Type selectors (e.g., h1) and pseudo-elements (e.g., :before).
+Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+ID selectors (e.g., #example).
