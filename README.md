@@ -516,3 +516,9 @@ The following list of selector types increases by specificity:
 Type selectors (e.g., h1) and pseudo-elements (e.g., :before).
 Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
 ID selectors (e.g., #example).
+
+Q23. Explain event delegation
+* Solution:
+** relates to DOM events
+** JavaScript event listeners fire not only on a single DOM element but on all of its descendants
+** Event bubbling or propagation is the inverse of event delegation (events on an element bubble up and fire on all parents)
