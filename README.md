@@ -519,6 +519,6 @@ ID selectors (e.g., #example).
 
 Q23. Explain event delegation
 * Solution:
-** relates to DOM events
-** JavaScript event listeners fire not only on a single DOM element but on all of its descendants
-** Event bubbling or propagation is the inverse of event delegation (events on an element bubble up and fire on all parents)
+1. relates to DOM events
+2. JavaScript event listeners fire not only on a single DOM element but on all of its descendants
+3. Event bubbling or propagation is the inverse of event delegation (events on an element bubble up and fire on all parents)
