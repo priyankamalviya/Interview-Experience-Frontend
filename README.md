@@ -552,5 +552,5 @@ partners: [
 console.log(partners.filter(partner => partner.partner2.length));
 ```
 
-Array .filter() method returns filtered object if the return is trithy, or else ignores. Here if we check length of partner2, we can filter pairs based on truthy or falsy values.
+Array .filter() method returns filtered object if the return is truthy, or else ignores. Here if we check length of partner2, we can filter pairs based on truthy or falsy values-> empty length of partner 2 means, that object needs to be ignored. Very simple problem, tests thought process!
 
