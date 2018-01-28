@@ -522,3 +522,35 @@ Q23. Explain event delegation
 1. relates to DOM events
 2. JavaScript event listeners fire not only on a single DOM element but on all of its descendants
 3. Event bubbling or propagation is the inverse of event delegation (events on an element bubble up and fire on all parents)
+
+Q24. You have an array of objects containing pairs of partners. Find out the single one!
+
+* Solution:
+
+// The solution is quite simple. Lets say our array is:
+
+```
+partners: [
+    {
+        "partner1": "Tom",
+        "partner2": "Monika"
+    },
+        {
+        "partner1": "Jill",
+        "partner2": ""
+    },
+        {
+        "partner1": "Sam",
+        "partner2": "Tina"
+    },
+        {
+        "partner1": "Kim",
+        "partner2": ""
+    }
+];
+
+console.log(partners.filter(partner => partner.partner2.length));
+```
+
+Array .filter() method returns filtered object if the return is trithy, or else ignores. Here if we check length of partner2, we can filter pairs based on truthy or falsy values.
+
