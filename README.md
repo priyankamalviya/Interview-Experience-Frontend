@@ -373,6 +373,16 @@ createDOMTree($('#tree'))(TREE_DATA);
 Q17. Write a function to find Fibonacii sum.
 * This is a very common problem.
 * You get extra points if you optimize the solution using memoization.
+* Simple Solution: 
+```
+function fib(num) {
+    if n<2 return n;
+    else return (fib(n-1) + fib(n-2));
+}
+```
+This indeed is a super simple problem, but I was asked this question during onsite interview of one of the top 4 companies. The motive of the interviewer was to judge if I was capable of breaking down a problem to simplest parts and solve with absolute clarity. A programmer's job is not just programming, but finding out the most optimal solution to a problem and being able to communicate the explanation in a crisp and concise manner :). 
+
+[Click here](https://www.youtube.com/watch?v=zg-ddPbzcKM) to find a Khan Academy link that explains this algorithm very clearly. I found this explanation to be very helpful. 
 ```
 function fibonacii(num, memo){ 
   memo = memo || {};
@@ -385,6 +395,7 @@ function fibonacii(num, memo){
 
 console.log(fibonacii(9));
 ```
+
 Q18. Implement the fizzbuzz problem.
 *  The fizzbuzz problem:
 if a number is a multiple of 3, print fizz
