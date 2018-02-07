@@ -422,6 +422,18 @@ for(let i =1; i< 101; i++){
 
 }
 ```
+
+Recently I learnt about Array.from() and wrote a simpler (1 Line! :D) script to the problem:
+
+```
+const fizzbuzz = Array.from(Array(100).keys()).forEach(x => {
+     (x%3 && x%5) ? console.log("FizzBuzz")
+    : x%5 ? console.log("Buzz")
+    : x%3 ? console.log("Fizz") 
+    : null;
+  }
+  );
+```
 Q19. Write a function to convert a string to an integer
 * Solution in es6 (Typescript)
  ```
